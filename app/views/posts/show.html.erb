@@ -1,0 +1,7 @@
+<p><%= @post.title %></p>
+<% if user_signed_in?%>
+    <p><%= @user.name %></p>
+  <% else %>
+    <p>Anonim</p>
+  <% end %>
+<p><%= @post.content %></p>
