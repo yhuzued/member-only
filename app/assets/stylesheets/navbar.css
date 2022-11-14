@@ -1,7 +1,4 @@
-html body {
-  margin: 0;
-  padding: 0px;
-}
+
 
 a {
   text-decoration: none;
@@ -46,4 +43,9 @@ a {
     flex-direction: column;
     gap: 12px;
   }
+}
+
+.layout .logo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
 }
