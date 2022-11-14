@@ -1,8 +1,4 @@
-<h1>Post#index</h1>
-
-<%= link_to 'Sign_in', new_user_session_path %>
-<%= link_to 'New post', new_post_path %>
-<%= link_to 'Sign out', destroy_user_session_path, data: { "turbo-method": :delete } %>
+<h1>Posts</h1>
 
 <% @post.reverse_each do |post| %>
 <% user = User.find(post.user_id).name %>
