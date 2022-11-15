@@ -5,9 +5,9 @@
       <% user = User.find(post.user_id).name %>
         <h1><%= post.title %></h1>
         <% if user_signed_in?%>
-          <p>Writen by: <em><%= user %></em></p>
+          <h5><strong>Writen by</strong>: <em><%= user %></em></h5>
         <% else %>
-          <p>Writen by: <em>Anonim</em></p>
+          <h5><strong>Writen by</strong>: <em>Anon</em></h5>
         <% end %>
         <p><%= post.content.to_plain_text.truncate(150) %></p>
         <div><%= link_to 'Show more', post %></div>
