@@ -3,7 +3,7 @@
     <div class='background-white'>
       <h1><%= @post.title %></h1>
       <% if user_signed_in?%>
-          <p>Writen by: <%= @user.name %></p>
+          <p>Writen by: <em><%= @user.name %></em></p>
         <% else %>
           <p>Writen by: <em>Anonim</em></p>
         <% end %>

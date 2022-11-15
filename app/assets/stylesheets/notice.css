@@ -1,14 +1,9 @@
-#notification {
-  display: flex;
-  justify-content: center;
-}
- 
  /* The alert message box */
  .alert, .notice {
   font-size: smaller;
   margin: 1rem;
   padding: 1rem;
-  background-color: rgb(238, 238, 116); /* Yellow */
+  background-color: rgb(255, 255, 169); /* Yellow */
   color: black;
   width: clamp(200px, 29%, 30%);
   display: flex;

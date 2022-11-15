@@ -1,0 +1,22 @@
+#edit-profile {
+  margin: 0 10vw 1rem 10vw;
+}
+
+#edit-profile .background-white {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#edit-profile input {
+  outline: none;
+  padding: 6px;
+  width: 95%;
+  margin: 6px 0 6px 0;
+}
+
+#edit-profile input[type=submit] {
+  outline: none;
+  padding: 6px;
+  width: 20%;
+  
+}

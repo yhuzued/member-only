@@ -5,21 +5,23 @@
   </p>
 <% end %>
 
-<h1>Post#new</h1>
-<%= form_with model: @post do |form| %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div id='index' class='new-story'>
+  <div class='background-white'>
+    <%= form_with model: @post do |form| %>
+    
+      <div class="field">
+        <div><%= form.label :title %></div>
+        <%= form.text_field :title %>
+      </div>
+    
+      <div class="field">
+        <%= form.rich_text_area :content %>
+      </div>
+    
+      <div class="submit">
+        <%= form.submit %>
+      </div>
+    
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.rich_text_area :content %>
-  </div>
-
-  <div class="submit">
-    <%= form.submit %>
-  </div>
-  
-<% end %>
+</div>

@@ -1,0 +1,22 @@
+.new-story {
+  margin: 0px 10vw 0px 10vw;
+}
+
+#title {
+  font-weight: bold;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.new-story #post_content {
+  min-height: 30vh;
+  margin-bottom: 1rem;
+}
+
+.new-story input {
+  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  min-width: 10vh;
+  padding: 6px;
+  outline: none;
+  font-size: large;
+}
