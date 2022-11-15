@@ -48,4 +48,9 @@ a {
 .layout .logo {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: larger;
+  letter-spacing: 0.1rem;
+}
+
+.layout .navbar h1 {
+  font-size: smaller;
 }

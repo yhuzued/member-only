@@ -1,0 +1,28 @@
+#login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#login .background-white{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  width: clamp(200px, 25%, 30%);
+}
+
+#new_user  input {
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+}
+
+#new_user #user_remember_me{
+  width: auto;
+}
+
+#new_user input[type=submit]{
+  margin: 5px 0px 5px 0px;
+  min-width: 106%;
+}

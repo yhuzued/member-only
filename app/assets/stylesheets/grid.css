@@ -1,0 +1,13 @@
+@media (min-width: 960px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}

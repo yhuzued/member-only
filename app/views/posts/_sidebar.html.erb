@@ -1,0 +1,6 @@
+ <div class="sidebar" id="sticky">
+  <h2>Featured stories</h2>
+  <% @featured.each do |post|%>
+    <p><%= link_to post.title, post %></p>
+  <% end %>
+</div>

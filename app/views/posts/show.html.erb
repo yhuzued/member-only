@@ -1,7 +1,17 @@
-<p><%= @post.title %></p>
-<% if user_signed_in?%>
-    <p><%= @user.name %></p>
-  <% else %>
-    <p>Anonim</p>
-  <% end %>
-<p><%= @post.content %></p>
+<div class="grid">
+  <div class="show">
+    <div class='background-white'>
+      <h1><%= @post.title %></h1>
+      <% if user_signed_in?%>
+          <p>Writen by: <%= @user.name %></p>
+        <% else %>
+          <p>Writen by: <em>Anonim</em></p>
+        <% end %>
+      <p><%= @post.content %></p>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+    <%= render 'posts/sidebar' %>
+  </div>
+</div>

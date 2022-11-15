@@ -1,3 +1,10 @@
+<% @post.errors.full_messages_for(:title).each do |message| %>
+  <p class="notice">
+    <%= message %>
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  </p>
+<% end %>
+
 <h1>Post#new</h1>
 <%= form_with model: @post do |form| %>
 

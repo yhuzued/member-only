@@ -1,12 +1,19 @@
-<h1>Posts</h1>
-
-<% @post.reverse_each do |post| %>
-<% user = User.find(post.user_id).name %>
-  <h2><%= post.title %></h1>
-  <% if user_signed_in?%>
-    <p><%= user %></p>
-  <% else %>
-    <p>Anonim</p>
-  <% end %>
-  <div><%= link_to 'Show more', post %></div>
-<% end %>
+<div class="grid">
+  <div class='index'>
+    <div class="background-white">
+      <% @post.reverse_each do |post| %>
+      <% user = User.find(post.user_id).name %>
+        <h1><%= post.title %></h1>
+        <% if user_signed_in?%>
+          <p>Writen by: <em><%= user %></em></p>
+        <% else %>
+          <p>Writen by: <em>Anonim</em></p>
+        <% end %>
+        <p><%= post.content.to_plain_text.truncate(150) %></p>
+        <div><%= link_to 'Show more', post %></div>
+      <% end %>
+    </div>
+  </div>
+  
+  <%= render 'posts/sidebar' %>
+</div>

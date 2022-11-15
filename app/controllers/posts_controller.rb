@@ -4,21 +4,22 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(@post.user_id)
+    @featured = Post.all.sample(5)
   end
 
   def index
     @post = Post.all
+    @featured = Post.all.sample(5)
   end
 
   def new
     @user = User.find(current_user.id) if user_signed_in?
-    @post = Post.new
+    @post = @user.posts.build
   end
 
   def create
     @user = User.find(current_user.id) if user_signed_in?
-    @post = Post.create(post_params)
-    @post.user_id = @user.id
+    @post = @user.posts.build(post_params)
 
     if @post.save
       redirect_to post_path(@post)

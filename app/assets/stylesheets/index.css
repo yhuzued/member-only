@@ -1,0 +1,18 @@
+.index h1 {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.index p {
+  margin-top: 0px;
+}
+
+.index {
+  margin-bottom: 1rem;
+}
+
+.background-white {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+}
