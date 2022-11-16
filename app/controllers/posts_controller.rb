@@ -4,12 +4,12 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(@post.user_id)
-    @featured = Post.all.sample(5)
+    @featured = PostsController.featured
   end
 
   def index
     @post = Post.all
-    @featured = Post.all.sample(5)
+    @featured = PostsController.featured
   end
 
   def new
@@ -32,6 +32,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content)
+  end
+
+  def self.featured
+    Post.all.sample(5)
   end
 
 end
