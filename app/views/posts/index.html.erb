@@ -2,16 +2,18 @@
   <div class='index'>
     <div class="background-white">
       <% @post.reverse_each do |post| %>
-      <% user = User.find(post.user_id).name %>
-        <h1><%= post.title %></h1>
-        <% if user_signed_in?%>
-          <h5><strong>Writen by</strong>: <em><%= user %></em></h5>
-        <% else %>
-          <h5><strong>Writen by</strong>: <em>Anon</em></h5>
+        <% user = User.find(post.user_id).name %>
+          <div class='index-item'>
+            <h1><%= post.title %></h1>
+            <% if user_signed_in?%>
+              <h5><strong>Writen by</strong>: <em><%= user %></em></h5>
+            <% else %>
+              <h5><strong>Writen by</strong>: <em>Anon</em></h5>
+            <% end %>
+            <p><%= post.content.to_plain_text.truncate(150) %></p>
+            <div><%= link_to 'Show more', post %></div>
+          </div>
         <% end %>
-        <p><%= post.content.to_plain_text.truncate(150) %></p>
-        <div><%= link_to 'Show more', post %></div>
-      <% end %>
     </div>
   </div>
   
